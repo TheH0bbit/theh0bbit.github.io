@@ -1,0 +1,236 @@
+/* =========================
+   Global
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0d1117;
+    color: #e6e6e6;
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.7;
+}
+
+/* =========================
+   Layout
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* =========================
+   Header / Hero
+========================= */
+
+header {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.75)
+        ),
+        url("images/banner.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: auto;
+    color: #d0d0d0;
+}
+
+.hero-stats {
+    margin-top: 2rem;
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+
+    min-width: 180px;
+}
+
+.stat-box h3 {
+    color: #d6b36a;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================
+   Sections
+========================= */
+
+section {
+    padding: 6rem 0;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+
+    color: #d6b36a;
+}
+
+.section-intro {
+    max-width: 850px;
+    margin-bottom: 3rem;
+
+    color: #c0c0c0;
+}
+
+/* =========================
+   Screenshot Cards
+========================= */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: #161b22;
+
+    border: 1px solid #252c36;
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    transition: 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    border-color: #d6b36a;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.card-content p {
+    color: #c8c8c8;
+}
+
+/* =========================
+   Project Overview
+========================= */
+
+.overview-box {
+    background: #161b22;
+
+    border-left: 5px solid #d6b36a;
+
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+/* =========================
+   Highlights
+========================= */
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.highlight {
+    background: #161b22;
+
+    padding: 1rem;
+    border-radius: 10px;
+
+    border: 1px solid #252c36;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    padding: 3rem 0;
+
+    text-align: center;
+
+    border-top: 1px solid #252c36;
+
+    color: #888;
+}
+
+/* =========================
+   Links
+========================= */
+
+a {
+    color: #d6b36a;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f2d28a;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+}
