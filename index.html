@@ -9,7 +9,64 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+<!-- ======================================
+     IMAGE LIGHTBOX
+======================================= -->
 
+<div id="lightbox" class="lightbox">
+
+    <span class="close-lightbox">&times;</span>
+
+    <img id="lightbox-image" src="" alt="">
+
+</div>
+
+<script>
+
+const images = document.querySelectorAll(".card img");
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightbox-image");
+const closeLightbox = document.querySelector(".close-lightbox");
+
+images.forEach(image => {
+
+    image.addEventListener("click", () => {
+
+        lightbox.style.display = "flex";
+        lightboxImage.src = image.src;
+
+    });
+
+});
+
+closeLightbox.addEventListener("click", () => {
+
+    lightbox.style.display = "none";
+
+});
+
+lightbox.addEventListener("click", (e) => {
+
+    if (e.target === lightbox) {
+
+        lightbox.style.display = "none";
+
+    }
+
+});
+
+document.addEventListener("keydown", (e) => {
+
+    if (e.key === "Escape") {
+
+        lightbox.style.display = "none";
+
+    }
+
+});
+
+</script>
 <body>
 
 <!-- ======================================
@@ -376,3 +433,208 @@
     </div>
 
 </section>
+<!-- ======================================
+     NARRATIVE DESIGN
+======================================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2>Narrative Design</h2>
+
+        <p class="section-intro">
+            Beyond gameplay systems, Harmony of the Stars features an original
+            fantasy setting, multiple story arcs, character relationships,
+            side content, and long-term narrative progression integrated
+            directly into gameplay systems.
+        </p>
+
+        <div class="card-grid">
+
+            <div class="card">
+
+                <img src="images/story.png" alt="Story Scene">
+
+                <div class="card-content">
+
+                    <h3>Story-Driven Progression</h3>
+
+                    <p>
+                        Narrative events are closely integrated with quest
+                        progression, exploration, relationship development,
+                        and gameplay systems. Story choices and progression
+                        unlock new locations, characters, and content.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+     WORLDBUILDING & CONTENT CREATION
+======================================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2>Worldbuilding & Content Creation</h2>
+
+        <p class="section-intro">
+            In addition to software development, the project required extensive
+            content production including worldbuilding, map creation,
+            visual design, animation production, image editing,
+            user interface design, and content integration.
+        </p>
+
+        <div class="card-grid">
+
+            <div class="card">
+
+                <img src="images/mainmenu.png" alt="Main Menu">
+
+                <div class="card-content">
+
+                    <h3>Visual Identity & Presentation</h3>
+
+                    <p>
+                        Design and implementation of the game's visual
+                        presentation, user interface styling, branding,
+                        menus, and overall player experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="images/worldmap.png" alt="World Map">
+
+                <div class="card-content">
+
+                    <h3>Worldbuilding</h3>
+
+                    <p>
+                        Creation of an original fantasy setting including
+                        nations, locations, lore, history, characters,
+                        progression structure, and narrative framework.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+     CONTACT
+======================================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2>Contact</h2>
+
+        <p class="section-intro">
+            If you would like to discuss the project, my development process,
+            or potential opportunities, feel free to get in touch.
+        </p>
+
+        <div class="highlights">
+
+            <div class="highlight">
+                <strong>Name</strong><br>
+                Raphael Penz
+            </div>
+
+            <div class="highlight">
+                <strong>Education</strong><br>
+                B.Sc. Computer Science: Games Engineering (TUM)
+            </div>
+
+            <div class="highlight">
+                <strong>Project</strong><br>
+                Harmony of the Stars
+            </div>
+
+            <div class="highlight">
+                <strong>Developer Alias</strong><br>
+                SkyGrazer
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <div style="text-align:center;">
+
+            <a href="https://skygrazer.itch.io/harmony-of-the-stars"
+               target="_blank"
+               class="button">
+
+                View Project on itch.io
+
+            </a>
+
+            <a href="RaphaelPenz_CV.pdf"
+               class="button">
+
+                Resume
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+     FOOTER
+======================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            Raphael Penz
+        </p>
+
+        <p>
+            Developer Alias: SkyGrazer
+        </p>
+
+        <p>
+            Harmony of the Stars — Solo RPG / Visual Novel Development Project
+        </p>
+
+        <p>
+            <a href="https://skygrazer.itch.io/harmony-of-the-stars"
+               target="_blank">
+
+                View Project on itch.io
+
+            </a>
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>
