@@ -214,6 +214,13 @@ header {
     transition: 0.25s ease;
 }
 
+.highlight.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .highlight:hover {
     border-color: #d6b36a;
     transform: translateY(-3px);
